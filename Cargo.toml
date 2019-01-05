@@ -1,0 +1,10 @@
+[package]
+name = "autobrowser"
+version = "0.1.0"
+authors = ["bergabman"]
+edition = "2018"
+
+[dependencies]
+autopilot = "0.1.0"
+rand = "0.6"
+image = "*"
