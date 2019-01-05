@@ -1,6 +1,4 @@
 extern crate autopilot;
-extern crate rand;
-
 extern crate image;
 use autopilot::geometry::Point;
 use autopilot::mouse;
@@ -9,9 +7,9 @@ use std::{thread, time};
 
 fn main() {
     let ffox_path =
-        image::open("C:\\rust\\autobrowser\\ffox_new.png").expect("Cant open home_button.png");
+        image::open("C:\\rust\\autobrowser\\ffox_new.png").expect("Cant open ffox_new.png");
     let home_button_path =
-        image::open("C:\\rust\\autobrowser\\home_button.png").expect("Cant open ffox.png");
+        image::open("C:\\rust\\autobrowser\\home_button.png").expect("Cant open home_button.png");
     let goto_path =
         image::open("C:\\rust\\autobrowser\\goto.png").expect("Cant open goto.png");
     let newtab_path =
@@ -34,7 +32,7 @@ fn main() {
     let upvotebutton = autopilot::bitmap::Bitmap::new(upvotebutton_path, Some(1 as f64));
     let newposts = autopilot::bitmap::Bitmap::new(newposts_path, Some(1 as f64));
 
-    println!("bitmaps loaded, image searct startup");
+    println!("Bitmaps loaded, image search startup");
     let screenshot = autopilot::bitmap::capture_screen().expect("Unable to capture screen");
 
     let pos_ffox = screenshot
@@ -46,7 +44,6 @@ fn main() {
     } else {
         smooth_mmove(pos_ffox);
         mouse::click(mouse::Button::Left, None);
-
         thread::sleep(time::Duration::from_millis(30));
     }
 
