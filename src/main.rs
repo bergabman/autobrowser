@@ -7,21 +7,21 @@ use std::{thread, time};
 
 fn main() {
     let ffox_path =
-        image::open("C:\\rust\\autobrowser\\ffox_new.png").expect("Cant open ffox_new.png");
+        image::open("C:\\rust\\autobrowser\\assets\\ffox_new.png").expect("Cant open ffox_new.png");
     let home_button_path =
-        image::open("C:\\rust\\autobrowser\\home_button.png").expect("Cant open home_button.png");
+        image::open("C:\\rust\\autobrowser\\assets\\home_button.png").expect("Cant open home_button.png");
     let goto_path =
-        image::open("C:\\rust\\autobrowser\\goto.png").expect("Cant open goto.png");
+        image::open("C:\\rust\\autobrowser\\assets\\goto.png").expect("Cant open goto.png");
     let newtab_path =
-        image::open("C:\\rust\\autobrowser\\newtab.png").expect("Cant open newtab.png");
+        image::open("C:\\rust\\autobrowser\\assets\\newtab.png").expect("Cant open newtab.png");
     let login_path =
-        image::open("C:\\rust\\autobrowser\\login.png").expect("Cant open login.png");
+        image::open("C:\\rust\\autobrowser\\assets\\login.png").expect("Cant open login.png");
     let loginbutton_path =
-        image::open("C:\\rust\\autobrowser\\loginbutton.png").expect("Cant open loginbutton.png");
+        image::open("C:\\rust\\autobrowser\\assets\\loginbutton.png").expect("Cant open loginbutton.png");
     let upvotebutton_path =
-        image::open("C:\\rust\\autobrowser\\upvote.png").expect("Cant open upvotebutton.png");
+        image::open("C:\\rust\\autobrowser\\assets\\upvote.png").expect("Cant open upvotebutton.png");
     let newposts_path =
-        image::open("C:\\rust\\autobrowser\\newposts.png").expect("Cant open newposts.png");
+        image::open("C:\\rust\\autobrowser\\assets\\newposts.png").expect("Cant open newposts.png");
 
     let ffox = autopilot::bitmap::Bitmap::new(ffox_path, Some(1 as f64));
     let home_button = autopilot::bitmap::Bitmap::new(home_button_path, Some(1 as f64));
